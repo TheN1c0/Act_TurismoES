@@ -6,10 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Holaaa</h1>
-    {% for alumno in Alumnos %}
+
+    <!-- {% for alumno in Alumnos %}
         {{alumno.rut}}, {{alumno.nombre}}, {{alumno.apellido_paterno}},
         {{alumno.apellido_materno}}, {{alumno.id_genero.genero}} <br>
-    {% endfor %}
+    {% endfor %} -->
+    <div>
+        <h1>Turismo ES</h1>
+        <p>
+            <a href="{% url 'listar' %}">Nuestros servicios</a>
+        </p>
+    </div>
 </body>
 </html>
