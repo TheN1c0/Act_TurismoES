@@ -34,6 +34,7 @@ class Alumno(models.Model):
         return str(self.nombre)+" "+str(self.apellido_paterno)   
 
 class Servicios(models.Model):
-    id = models.IntegerField(primary_key=True, max_length=10)
+    id = models.IntegerField(primary_key=True)
     precio = models.IntegerField()
     foto = models.ImageField(upload_to='media/%Y/%m/%d',null=True, blank=True,verbose_name='Imagen')
+    descripcion = models.CharField(max_length=200, null=True)

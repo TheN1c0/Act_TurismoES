@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'turismo/css/styles.css' %}">
 </head>
 <body>
 
@@ -12,10 +14,16 @@
         {{alumno.apellido_materno}}, {{alumno.id_genero.genero}} <br>
     {% endfor %} -->
     <div>
-        <h1>Turismo ES</h1>
+        <nav id="barranav">
+        <h1 id="empresa">Turismo ES</h1>
+        </nav>
+        <button >
+
+        </button>
         <p>
             <a href="{% url 'listar' %}">Nuestros servicios</a>
         </p>
     </div>
+    <script src="{% static 'turismo/js/scripts.js' %}"></script>
 </body>
 </html>
