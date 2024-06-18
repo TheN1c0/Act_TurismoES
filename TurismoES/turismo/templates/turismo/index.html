@@ -17,6 +17,30 @@
         <nav id="barranav">
         <h1 id="empresa">Turismo ES</h1>
         </nav>
+
+        <div>
+            <form action="{% url 'registrarServicio' %}" method="POST"  enctype="multipart/form-data"> {% csrf_token %}
+                <div>
+                    <label for="id">ID</label>
+                    <input type="number" name="idServicio" placeholder="id">
+                </div>
+                <div>
+                    <label for="precio">Precio</label>
+                    <input type="number" name="precioServicio" placeholder="Precio">
+                </div>
+                <div>
+                    <label for="foto">Foto</label>
+                    <input type="file" name="fotoServicio" >
+                </div>
+                <div>
+                    <label for="descripcion">Descripcion</label>
+                    <input type="text" name="descripcionServicio" placeholder="Descrpcion">
+                </div>
+                <div>
+                    <input type="submit" value="Guardar">
+                </div>
+            </form>
+        </div>
         <button >
 
         </button>

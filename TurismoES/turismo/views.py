@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+
 from .models import Alumno, Genero, Servicios
 # Create your views here.
 
@@ -16,3 +17,13 @@ def listar(request):
     Servicio= Servicios.objects.all()
     context={"Servicios":Servicio}
     return render(request, 'turismo/listar.html', context)
+
+def registrarServicio(request):
+        id = request.POST['idServicio']
+        precio = request.POST['precioServicio']
+        descripcion = request.POST['descripcionServicio']
+        foto = request.FILES['fotoServicio']
+        nuevo_servicio = Servicios(id= id, precio=precio, descripcion=descripcion, foto=foto)
+        nuevo_servicio.save()
+
+        return redirect('listar')
