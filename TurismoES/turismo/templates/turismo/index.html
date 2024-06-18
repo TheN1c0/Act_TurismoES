@@ -17,36 +17,42 @@
         <nav id="barranav">
         <h1 id="empresa">Turismo ES</h1>
         </nav>
+        <div class="contenedor">
+            <div class="contenido">
 
-        <div>
-            <form action="{% url 'registrarServicio' %}" method="POST"  enctype="multipart/form-data"> {% csrf_token %}
-                <div>
-                    <label for="id">ID</label>
-                    <input type="number" name="idServicio" placeholder="id">
+            
+                <div class="formulario">
+                    <h2>Ingrese un Servicio</h2>
+                    <form action="{% url 'registrarServicio' %}" method="POST"  enctype="multipart/form-data"> {% csrf_token %}
+                        <div>
+                            <label for="id">ID</label>
+                            <input type="number" name="idServicio" placeholder="id">
+                        </div>
+                        <div>
+                            <label for="precio">Precio</label>
+                            <input type="number" name="precioServicio" placeholder="Precio">
+                        </div>
+                        <div>
+                            <label for="foto">Foto</label>
+                            <input type="file" name="fotoServicio" >
+                        </div>
+                        <div>
+                            <label for="descripcion">Descripcion</label>
+                            <input type="text" name="descripcionServicio" placeholder="Descrpcion">
+                        </div>
+                        <div>
+                            <input type="submit" value="Guardar">
+                        </div>
+                    </form>
+
                 </div>
-                <div>
-                    <label for="precio">Precio</label>
-                    <input type="number" name="precioServicio" placeholder="Precio">
-                </div>
-                <div>
-                    <label for="foto">Foto</label>
-                    <input type="file" name="fotoServicio" >
-                </div>
-                <div>
-                    <label for="descripcion">Descripcion</label>
-                    <input type="text" name="descripcionServicio" placeholder="Descrpcion">
-                </div>
-                <div>
-                    <input type="submit" value="Guardar">
-                </div>
-            </form>
+                <br>
+
+            
+        
+                <a href="{% url 'listar' %}" class="boton">Nuestros servicios</a>
+            </div>
         </div>
-        <button >
-
-        </button>
-        <p>
-            <a href="{% url 'listar' %}">Nuestros servicios</a>
-        </p>
     </div>
     <script src="{% static 'turismo/js/scripts.js' %}"></script>
 </body>

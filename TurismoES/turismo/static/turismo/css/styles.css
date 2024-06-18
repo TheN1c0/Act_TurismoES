@@ -1,6 +1,53 @@
 body{
-    background-color: blanchedalmond;
+    background-color: white;
 }
 #empresa{
     text-align: center;
+}
+nav{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(10, 80, 167);
+    border: 1px solid rgb(10, 80, 167) ;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: rgb(194, 194, 194);
+}
+.contenedor{
+    position: relative;
+    height: 85vh;
+    width: 100%;
+    
+}
+.contenido{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+h2{
+    text-align: center;
+}
+.boton{
+    background-color: rgb(10, 80, 167);
+    text-decoration: none;
+    color: rgb(251, 253, 254);
+    border-radius: 10px;
+    padding: 10px 20px;
+    
+}
+.formulario{
+    background-color: rgba(105, 159, 229, 0.534);
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 35vh;
+    width: 35vh;
+    padding: 1vh;
+    padding-top:3vh; 
+}
+input{
+    display: block;
 }
