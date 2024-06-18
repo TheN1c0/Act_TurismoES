@@ -1,0 +1,15 @@
+.general {
+    position: relative;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.servicioTipo {
+    border: 1px solid black;
+    width: 80vw; 
+    margin: 10px 0;
+    background-color: rgba(22, 185, 84, 0.534);
+    text-align: center;
+}

@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lista de Servicios</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'turismo/css/stylesListar.css' %}">
 </head>
 <body>
-    <ul>
+    <div class="general">
+    
          {% for servicio in Servicios %}
-            <li>
+            <div class="servicioTipo">
+            
                 <h2>{{ servicio.descripcion }}</h2>
                 <p>Precio: {{ servicio.precio }}</p>
                 <img src="{{ servicio.foto.url }}" alt="Foto de {{ servicio.descripcion }}">
-            </li>
+            
+            </div>
+            <br>
         {% endfor %} 
-    </ul>
-
+    
+    </div>
 </body>
 </html>
